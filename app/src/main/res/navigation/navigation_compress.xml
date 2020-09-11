@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_compress.xml"
+    app:startDestination="@id/videoPickerFragment">
+
+    <fragment
+        android:id="@+id/videoPickerFragment"
+        android:name="com.rohit.UniversalCompressor.fragments.VideoPickerFragment"
+        android:label="fragment_video_picker"
+        tools:layout="@layout/fragment_video_picker" >
+        <action
+            android:id="@+id/action_videoPickerFragment_to_videoCompressorFragment"
+            app:destination="@id/videoCompressorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoCompressorFragment"
+        android:name="com.rohit.UniversalCompressor.fragments.VideoCompressorFragment"
+        android:label="video_compressor_fragment"
+        tools:layout="@layout/video_compressor_fragment" >
+        <action
+            android:id="@+id/action_videoCompressorFragment_to_videoViewFragment"
+            app:destination="@id/videoViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoViewFragment"
+        android:name="com.rohit.UniversalCompressor.fragments.VideoViewFragment"
+        android:label="fragment_video_view"
+        tools:layout="@layout/fragment_video_view" />
+</navigation>
